@@ -1,32 +1,7 @@
 # Imports
-import re
-import sys
-import nltk
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import itertools
-import matplotlib.pyplot as plt
-
-from os import getcwd, sep, path
 from copy import deepcopy
-from nltk import word_tokenize
-
-import inspect
-import numpy as np
-import pandas as pd
-from sklearn.pipeline import Pipeline
-
-# Modelling
-from sklearn.metrics import classification_report, f1_score, accuracy_score, confusion_matrix, roc_curve, auc, roc_auc_score, ConfusionMatrixDisplay, plot_confusion_matrix
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
-from sklearn.preprocessing import OneHotEncoder, LabelEncoder
-from sklearn.model_selection import train_test_split
-
-# bag of words
-from sklearn.feature_extraction.text import TfidfVectorizer
-
+from sklearn.base import TransformerMixin, ClassifierMixin, RegressorMixin, BaseEstimator
+from src.templates.io import get_transformer_outputs
 
 
 def standard_obj_type(obj):

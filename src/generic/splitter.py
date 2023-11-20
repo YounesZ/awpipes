@@ -1,14 +1,9 @@
-import re
 import numpy as np
 import pandas as pd
-from typing import Optional, Union
+from typing import Union
 
 # Modelling
 from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin, RegressorMixin
-from sklearn.metrics import classification_report, f1_score, accuracy_score, confusion_matrix, roc_curve, auc, roc_auc_score, ConfusionMatrixDisplay, plot_confusion_matrix
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
-from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 from sklearn.model_selection import train_test_split
 
 

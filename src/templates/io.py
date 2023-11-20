@@ -1,7 +1,6 @@
 import inspect
 import numpy as np
 import pandas as pd
-from sklearn.pipeline import Pipeline
 
 
 def determine_input_type(fcn, arg_names=['X', 'y']):

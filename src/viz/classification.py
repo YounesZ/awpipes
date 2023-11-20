@@ -1,22 +1,9 @@
-## Imports
-import re
+# Imports
 import numpy as np
 import pandas as pd
-import inspect
 import matplotlib.pyplot as plt
-
-
-from os import getcwd, sep, path
-from math import ceil
-from copy import deepcopy
-from typing import Optional, Union
-from sklearn.base import BaseEstimator, TransformerMixin, ClassifierMixin, RegressorMixin
 from sklearn.metrics import classification_report, f1_score, accuracy_score, confusion_matrix, roc_curve, auc, roc_auc_score, ConfusionMatrixDisplay, plot_confusion_matrix
-from scipy.sparse.csr import csr_matrix
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
+
 
 
 def printout_metrics(y, y_hat, class_names=None):
