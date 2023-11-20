@@ -1,0 +1,3 @@
+[submodule "submodules/awlib"]
+	path = submodules/awlib
+	url = git@gitlab.udd.attijariwafa.net:interne-analytics/awlib.git
