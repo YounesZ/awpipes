@@ -1,0 +1,11 @@
+# Large files
+*.txt
+*.csv
+*.h5
+*.npy
+data/
+
+# Pycharm
+.idea/
+
+
