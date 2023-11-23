@@ -123,7 +123,7 @@ if __name__ == '__main__':
     from submodules.awpipes.src.templates.blocks import AWBPipeline
 
     DATA_FILE = ['factures_2015.xlsx']
-    df = [pd.read_excel("/".join([PATHS['ROOT_DATA'], "Completes", i_])) for i_ in DATA_FILE]
+    df = [pd.read_excel("/".join([PATHS['ROOT_DATA'], "Completes", i_]), 'DATA') for i_ in DATA_FILE]
     df = pd.concat(df, axis=0).reset_index()
 
     # --- FEATURE ENCODING --- #
