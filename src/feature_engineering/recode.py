@@ -45,11 +45,12 @@ class AWFeatureEncoder(TransformerMixin):
         # Output prefix
         self.out_prefix = []
         if isinstance(out_prefix, list) and (len(out_prefix)>0):
-            self.out_prefix = in_columns
+            self.out_prefix = out_prefix
         # Encoders
         self.encoders = []
         if isinstance(in_columns, list) and (len(in_columns)>0):
-            self.encoders = [encoder.__class__() for i_ in in_columns]
+            enc_params = encoder.get_params()
+            self.encoders = [encoder.__class__(**enc_params) for i_ in in_columns]
         self.dropin = dropin
         self.in_columns = in_columns
         TransformerMixin.__init__(self)

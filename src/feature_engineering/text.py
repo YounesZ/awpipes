@@ -36,7 +36,7 @@ class AWBTfidfVectorizer(TransformerMixin):
                   y: Optional[pd.DataFrame] = None, **kwargs) -> pd.DataFrame:
 
         # Turn dataframe column to list
-        for i_, j_ in zip(self.in_columns, self.vectorizer):
+        for i_, j_,k_ in zip(self.in_columns, self.vectorizer, self.out_prefix):
             # Extract + transform column
             i_col = X[i_]
             # Remove NaNs
@@ -46,7 +46,7 @@ class AWBTfidfVectorizer(TransformerMixin):
             # Put in new df
             nCols = o_col.shape[1]
             newDf = pd.DataFrame(data=np.zeros([len(X), nCols]),
-                                 columns=[f'{i_}_{j_}' for j_ in range(nCols)],
+                                 columns=[f'{k_}_{j_}' for j_ in range(nCols)],
                                  index=X.index)
             newDf.loc[i_col_nan.index, :] = o_col
 
